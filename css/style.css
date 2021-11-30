@@ -1,5 +1,10 @@
 body{
     font-family: Arial, Helvetica, sans-serif;
+    background-color: #6c896d;
+}
+
+a{
+    text-decoration: none;
 }
 
 input{
@@ -7,7 +12,6 @@ input{
 }
 
 a:link .botao_inicial , a:visited .botao_inicial {
-    text-decoration: none;
     color: #000;
 }
 
@@ -22,7 +26,6 @@ a:link .botao_inicial , a:visited .botao_inicial {
     border-width: 3px;
     border-radius: 10px;
     border-color: #000;
-    display: inline-block;
     margin: 5px;
 }
 
@@ -41,4 +44,26 @@ a:link .botao_inicial , a:visited .botao_inicial {
 
 .tabela tr:nth-child(even){
       background-color: #d6eeee;
+}
+
+.miolo{
+    width: 40vw;
+    height: 40vh;
+    background-color: #6c896d;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.miolo_adm{
+    width: 40vw;
+    height: 40vh;
+    background-color: #6c896d;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
 }
