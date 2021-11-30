@@ -21,10 +21,17 @@ CREATE TABLE IF NOT EXISTS produto(
 
 CREATE TABLE IF NOT EXISTS venda(
     id_venda INT auto_increment NOT NULL,
-    id_produto INT NOT NULL,
-    qtd INT,
     data_venda DATE,
-    PRIMARY KEY(id_venda),
+    PRIMARY KEY(id_venda)
+);
+
+CREATE TABLE produtos_venda(
+    id_produtos_venda INT auto_increment NOT NULL,
+    id_venda INT,
+    id_produto INT,
+    qtd_vendida INT,
+    PRIMARY KEY(id_produtos_venda),
+    FOREIGN KEY(id_venda) REFERENCES venda(id_venda),
     FOREIGN KEY(id_produto) REFERENCES produto(id_produto)
 );
 

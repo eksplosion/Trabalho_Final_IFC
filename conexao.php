@@ -1,3 +1,3 @@
 <?php
-    $conn = mysqli_connect("localhost", "php", "php", "farmacia");
+    $conn = mysqli_connect("localhost:3307", "root", "", "farmacia");
 ?>

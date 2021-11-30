@@ -46,9 +46,11 @@
                  "</tr>";
         }
         echo "</table>";
+        echo "<a href=\"consultar_produtos.php\">Realizar nova consulta</a>";
     }
     else
         echo "Você não tem permissão para realizar esta ação";
 ?>
+    <a href="index.php">Voltar a tela inicial</a>
 </body>
 </html>
