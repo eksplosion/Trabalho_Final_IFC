@@ -1,6 +1,6 @@
 body{
     font-family: Arial, Helvetica, sans-serif;
-    background-color: #6c896d;
+    background-color: #89D7F5;
 }
 
 a{
@@ -18,15 +18,18 @@ a:link .botao_inicial , a:visited .botao_inicial {
 .botao_inicial{
     text-align: center;
     padding-top: 30px;
+    padding-right: 20px;
+    padding-left: 20px;
     font-size: 20px;
     width: 200px;
     height: 50px;
     background-color: #cfc;
     border-style: solid;
-    border-width: 3px;
+    border-width: 2px;
     border-radius: 10px;
     border-color: #000;
     margin: 5px;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.384);
 }
 
 .tabela{
@@ -46,24 +49,31 @@ a:link .botao_inicial , a:visited .botao_inicial {
       background-color: #d6eeee;
 }
 
-.miolo{
-    width: 40vw;
-    height: 40vh;
-    background-color: #6c896d;
-    display: inline-flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
+.container{
+    
+    text-align: center;
+    margin-top: 200px;
 }
 
-.miolo_adm{
-    width: 40vw;
+.miolo{
+    margin: 0 50px;
     height: 40vh;
-    background-color: #6c896d;
     display: inline-flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: right;
     align-items: center;
+    padding-top: 0vh;
+    padding-bottom: 100px;
 
+}
+.radius{
+    width: 900px;
+    border-radius: 15px;
+    margin: auto;
+    background-color: #ffffff;
+    box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.384);
+
+}
+h1{
+    padding: 5vh;
 }
