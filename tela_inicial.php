@@ -9,7 +9,8 @@
         $acesso = check();
         if($acesso == "Funcionario" || $acesso == "Administrador")
         {
-            echo '<div class="radius"><h1>Farmácia Ponto da Droga</h1>';
+            echo '<div class="radius">';
+            echo '<h1>Drogaria Excesso</h1>';
             echo '<div class = "miolo">';
             echo '<h3>Atendente</h3>';
             echo '<a href="cadastrar_venda.php"><div class="botao_inicial"> Cadastrar venda </div></a>';
