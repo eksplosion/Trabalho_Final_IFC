@@ -21,7 +21,7 @@ CREATE TABLE IF NOT EXISTS produto(
 
 CREATE TABLE IF NOT EXISTS venda(
     id_venda INT auto_increment NOT NULL,
-    data_venda DATE,
+    data_venda DATETIME,
     PRIMARY KEY(id_venda)
 );
 
