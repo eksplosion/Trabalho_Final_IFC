@@ -12,8 +12,9 @@
             echo "<p>Funcionário cadastrado com sucesso</p>";
         else
             echo "<p>Erro ao cadastrar o funcionário</p>";
-        echo $conn->error;
+        echo '<a href="cadastrar_funcionario.php">Cadastrar novo funcionário</a>';
     }
     else
         echo "Você não tem permissão para realizar esta ação";
 ?>
+<a href="index.php">Voltar a tela inicial</a>

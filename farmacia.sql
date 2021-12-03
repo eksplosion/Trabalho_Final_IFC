@@ -11,12 +11,12 @@ CREATE TABLE IF NOT EXISTS funcionario(
 );
 
 CREATE TABLE IF NOT EXISTS produto(
-    id_produto INT auto_increment NOT NULL,
+    cod_barras BIGINT UNSIGNED NOT NULL,
     nome VARCHAR(150),
     validade DATE NOT NULL,
     qtd INT,
     preco FLOAT,
-    PRIMARY KEY(id_produto)
+    PRIMARY KEY(cod_barras)
 );
 
 CREATE TABLE IF NOT EXISTS venda(
@@ -28,11 +28,11 @@ CREATE TABLE IF NOT EXISTS venda(
 CREATE TABLE produtos_venda(
     id_produtos_venda INT auto_increment NOT NULL,
     id_venda INT,
-    id_produto INT,
+    cod_barras INT,
     qtd_vendida INT,
     PRIMARY KEY(id_produtos_venda),
     FOREIGN KEY(id_venda) REFERENCES venda(id_venda),
-    FOREIGN KEY(id_produto) REFERENCES produto(id_produto)
+    FOREIGN KEY(cod_barras) REFERENCES produto(cod_barras)
 );
 
 INSERT INTO funcionario(nome, login, senha, acesso) VALUES

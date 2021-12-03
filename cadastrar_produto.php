@@ -1,4 +1,7 @@
 <form method="POST" action="cadastro_produto.php">
+    <label for="cod">Código de barras:</label>
+    <input type="number" name="cod"><br>
+
     <label for="nome">Nome:</label>
     <input type="text" name="nome"><br>
 

@@ -13,3 +13,4 @@
 
     <input type="submit" value="Submit">
 </form>
+<a href="index.php">Voltar a tela inicial</a>

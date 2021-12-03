@@ -8,10 +8,13 @@
     else
     {
         include("conexao.php");
-        $id = $_GET['id'];
-        $produto = mysqli_query($conn, "SELECT * FROM produto WHERE id_produto = $id");
+        $cod = $_GET['cod'];
+        $produto = mysqli_query($conn, "SELECT * FROM produto WHERE cod_barras = $cod");
         $produto = mysqli_fetch_array($produto);
         mysqli_close($conn);
+
+        echo '<label for="cod">Código de barras:</label>';
+        echo '<input type="text" name="cod" value="'.$produto['cod_barras'].'"><br>';
 
         echo '<label for="nome">Nome:</label>';
         echo '<input type="text" name="nome" value="'.$produto['nome'].'"><br>';
@@ -24,8 +27,6 @@
 
         echo '<label for="qtd">Quantidade:</label>';
         echo '<input type="number" name="qtd" value="'.$produto['qtd'].'"><br>';
-
-        echo "<input type=\"hidden\" name=\"id\" value=\"$id\">";
     }
 ?>
     <input type="submit" value="Submit">

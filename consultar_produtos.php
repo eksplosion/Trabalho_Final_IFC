@@ -4,6 +4,7 @@
 </head>
 <body>
     <form method="POST" action="consulta_produtos.php">
+        <input type="number" name="cod" placeholder="Código de barras"><br>
         <input type="text" name="nome" placeholder="Nome do produto">
         <table>
             <tr>
@@ -17,4 +18,5 @@
         </table>
         <input type="submit" value="Submit">
     </form>
+    <a href="index.php">Voltar a tela inicial</a>
 </body>
