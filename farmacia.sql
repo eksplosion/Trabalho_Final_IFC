@@ -28,7 +28,7 @@ CREATE TABLE IF NOT EXISTS venda(
 CREATE TABLE produtos_venda(
     id_produtos_venda INT auto_increment NOT NULL,
     id_venda INT,
-    cod_barras INT,
+    cod_barras BIGINT UNSIGNED,
     qtd_vendida INT,
     PRIMARY KEY(id_produtos_venda),
     FOREIGN KEY(id_venda) REFERENCES venda(id_venda),
