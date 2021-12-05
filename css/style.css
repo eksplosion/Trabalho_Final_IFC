@@ -1,5 +1,10 @@
 body{
     font-family: Arial, Helvetica, sans-serif;
+    background-color: #89D7F5;
+}
+
+a{
+    text-decoration: none;
 }
 
 input{
@@ -7,23 +12,24 @@ input{
 }
 
 a:link .botao_inicial , a:visited .botao_inicial {
-    text-decoration: none;
     color: #000;
 }
 
 .botao_inicial{
     text-align: center;
     padding-top: 30px;
+    padding-right: 20px;
+    padding-left: 20px;
     font-size: 20px;
     width: 200px;
     height: 50px;
     background-color: #cfc;
     border-style: solid;
-    border-width: 3px;
+    border-width: 2px;
     border-radius: 10px;
     border-color: #000;
-    display: inline-block;
     margin: 5px;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.384);
 }
 
 .tabela{
@@ -41,4 +47,49 @@ a:link .botao_inicial , a:visited .botao_inicial {
 
 .tabela tr:nth-child(even){
       background-color: #d6eeee;
+}
+
+.container{
+    text-align: center;
+    margin-top: 200px;
+}
+
+.miolo{
+    margin: 0 50px;
+    height: 40vh;
+    display: inline-flex;
+    flex-direction: column;
+    padding-top: 0vh;
+    padding-bottom: 100px;
+}
+
+.radius{
+    width: 900px;
+    border-radius: 15px;
+    margin: auto;
+    background-color: #ffffff;
+    box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.384);
+}
+
+h1{
+    padding: 5vh;
+}
+
+.formu{
+    width: 500px;
+    border-radius: 15px;
+    background-color: #ffffff;
+    box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.384);
+    margin: auto;
+    text-align: center;
+    padding: 20px;
+    margin-top: 200px;
+}
+
+.formu input{
+    margin: 5px;
+ }
+
+.formu table{
+    margin:auto;
 }

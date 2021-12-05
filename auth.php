@@ -2,7 +2,7 @@
     function check()
     {
         include("conexao.php");
-        if(session_status() == PHP_SESSION_NONE )
+        if(session_status() == PHP_SESSION_NONE)
             session_start();
         if(!isset($_SESSION['login']) || !isset($_SESSION['senha']))
             return false;
