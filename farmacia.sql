@@ -36,4 +36,5 @@ CREATE TABLE produtos_venda(
 );
 
 INSERT INTO funcionario(nome, login, senha, acesso) VALUES
-("Tiago", "admin", "d82494f05d6917ba02f7aaa29689ccb444bb73f20380876cb05d1f37537b7892", "Administrador");
+("Admin", "admin", "d82494f05d6917ba02f7aaa29689ccb444bb73f20380876cb05d1f37537b7892", "Administrador"),
+("Tiago", "TiagoTG", "c224744ce1f1090de25bd7963cc61062ac2311891eff2ebb34ad2709a1dea5bc", "Funcionario");

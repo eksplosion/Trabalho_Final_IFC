@@ -1,16 +1,41 @@
-<form method="POST" action="cadastro_funcionario.php">
-    <label for="nome">Nome:</label>
-    <input type="text" name="nome"><br>
+<html>
+<head>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="formu">
+    <form method="POST" action="cadastro_funcionario.php">
+        <table>
+            <tr>
+                <td><label for="nome">Nome:</label></td>
+                <td><input type="text" name="nome" placeholder="Nome"></td>
+            </tr>
 
-    <label for="login">Login:</label>
-    <input type="text" name="login"><br>
+            <tr>
+                <td><label for="login">Login:</label></td>
+                <td><input type="text" name="login" placeholder="Login"></td>
+            </tr>
 
-    <label for="senha">Senha:</label>
-    <input type="password" name="senha"><br>
+            <tr>
+                <td><label for="senha">Senha:</label></td>
+                <td><input type="password" name="senha" placeholder="Senha"></td>
+            </tr>
+            <tr>
+                <td><label for="acesso">Nível de acesso:</label></td>
+                <td>
+                    <input type="radio" name="acesso" id="funcionario" value="Funcionario">
+                    <label for="funcionario">Funcionário</label>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <input type="radio" name="acesso" id="administrador" value="Administrador">                           <label for="administrador">Administrador</label>
+                </td>
+            </tr>
+        </table>
 
-    <label for="acesso">Nível de acesso:</label>
-    <input type="text" name="acesso"><br>
-
-    <input type="submit" value="Submit">
-</form>
-<a href="index.php">Voltar a tela inicial</a>
+        <input type="submit" class="botao_acao" value="Cadastrar">
+    </form>
+    <a href="index.php"><div class="botao_acao">Voltar a tela inicial</div></a>
+</body>

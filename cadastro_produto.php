@@ -1,3 +1,8 @@
+<html>
+<head>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
 <?php
     include("auth.php");
     if(check() == "Administrador")
@@ -15,11 +20,13 @@
         if(mysqli_query($conn, $sql))
             echo "<p>Produto cadastrado com sucesso</p>";
         else
-            echo "<p>Erro ao cadastrar o produto</p>";
+            echo "<p>Erro ao cadastrar produto</p>";
         mysqli_close($conn);
-        echo '<a href="cadastrar_produto.php">Cadastrar novo produto</a>';
+        echo '<a href="cadastrar_produto.php"><div class="botao_acao">Cadastrar novo produto</div></a>';
     }
     else
         echo "Você não tem permissão para realizar esta ação";
 ?>
-<a href="index.php">Voltar a tela inicial</a>
+    <a href="index.php"><div class="botao_acao">Voltar a tela inicial</div></a>
+</body>
+</html>

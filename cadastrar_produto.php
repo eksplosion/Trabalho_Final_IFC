@@ -1,18 +1,37 @@
-<form method="POST" action="cadastro_produto.php">
-    <label for="cod">Código de barras:</label>
-    <input type="number" name="cod"><br>
+<html>
+<head>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="formu">
+        <h3>Cadastro de Produto</h3>
+        <form method="POST" action="cadastro_produto.php">
+            <table>
+                <tr>
+                    <td>Cód de barras:</td>
+                    <td><input type="number" name="cod" placeholder="Código de barras"></td>
+                </tr>
+                <tr>
+                    <td>Nome:</td>
+                    <td><input type="text" name="nome" placeholder="Nome do produto"></td>
+                </tr>
+                <tr>
+                    <td><label for="validade_menor">Validade:</label></td>
+                    <td><input type="date" name="validade"></td>
+                </tr>
 
-    <label for="nome">Nome:</label>
-    <input type="text" name="nome"><br>
+                <tr>
+                    <td><label for="preco">Preço:</label></td>
+                    <td><input type="text" name="preco" placeholder="Preço"></td>
+                </tr>
 
-    <label for="validade">Validade:</label>
-    <input type="date" name="validade"><br>
+                <tr>
+                    <td><label for="qtd">Quantidade:</label></td>
+                    <td><input type="number" name="qtd" placeholder="Quantidade"></td>
+                </tr>
+            </table>
 
-    <label for="preco">Preço:</label>
-    <input type="text" name="preco"><br>
-
-    <label for="qtd">Quantidade:</label>
-    <input type="number" name="qtd"><br>
-
-    <input type="submit" value="Submit">
-</form>
+            <input type="submit" class="botao_acao" value="Cadastrar">
+        </form>
+    </div>
+</body>

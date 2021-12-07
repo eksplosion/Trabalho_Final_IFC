@@ -34,7 +34,7 @@
         }
         mysqli_close($conn);
 
-        echo "<table class=\"tabela\"><tr><th>Cód de barras</th><th>Nome</th><th>Preço</th><th>Quantidade</th><th>Validade</th>".($acesso == "Administrador" ? "<th>Ações</th>" : "");
+        echo "<table class=\"tabela\"><tr><th>Código de barras</th><th>Nome</th><th>Preço</th><th>Quantidade</th><th>Validade</th>".($acesso == "Administrador" ? "<th>Ações</th>" : "");
         foreach($produtos as $produto)
         {
             echo "<tr>".
@@ -44,17 +44,17 @@
                  "<td>".$produto['qtd']."</td>".
                  "<td>".$produto['validade']."</td>".
                  ($acesso == "Administrador" ?
-                 "<td><a href=\"editar_produto.php?cod=".$produto['cod_barras']."\">Editar</a> ".
-                 "<a href=\"deletar_produto.php?cod=".$produto['cod_barras']."\">Deletar</a></td>"
+                 "<td><a href=\"editar_produto.php?cod=".$produto['cod_barras']."\"><div class=\"botao_acao\">Editar</div></a> ".
+                 "<a href=\"excluir_produto.php?cod=".$produto['cod_barras']."\"><div class=\"botao_acao\">Excluir</div></a></td>"
                  : "" ).
                  "</tr>";
         }
-        echo "</table>";
-        echo "<a href=\"consultar_produtos.php\">Realizar nova consulta</a>";
+        echo "</table><br>";
+        echo '<a href="consultar_produtos.php"><div class="botao_acao">Realizar nova consulta</div></a>';
     }
     else
         echo "Você não tem permissão para realizar esta ação";
 ?>
-    <a href="index.php">Voltar a tela inicial</a>
+    <a href="index.php"><div class="botao_acao">Voltar a tela inicial</div></a>
 </body>
 </html>

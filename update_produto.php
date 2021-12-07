@@ -1,3 +1,8 @@
+<html>
+<head>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
 <?php
     include("auth.php");
     if(check() == "Administrador")
@@ -17,9 +22,10 @@
         else
             echo "<p>Erro ao alterar o produto</p>";
         mysqli_close($conn);
-        echo "<a href=\"consultar_produtos.php\">Realizar nova consulta</a>";
+        echo '<a href="consultar_produtos.php"><div class="botao_acao">Realizar nova consulta</div></a>';
     }
     else
         echo "Você não tem permissão para realizar esta ação";
 ?>
-<a href="index.php">Voltar a tela inicial</a>
+    <a href="index.php"><div class="botao_acao">Voltar a tela inicial</div></a>
+</body>

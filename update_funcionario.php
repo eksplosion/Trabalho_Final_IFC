@@ -8,6 +8,7 @@
     if(check() == "Administrador")
     {
         include("conexao.php");
+        $id = $_POST['id'];
         $nome = $conn->real_escape_string($_POST['nome']);
         $login = $conn->real_escape_string($_POST['login']);
         $senha = $conn->real_escape_string($_POST['senha']);
@@ -19,16 +20,17 @@
         else
         {
             $senha = hash("sha256", $login.$senha, false);
-            if(mysqli_query($conn, "INSERT INTO funcionario(nome, login, senha, acesso) VALUES ('$nome', '$login', '$senha', '$acesso')"))
-                echo "<p>Funcionário cadastrado com sucesso</p>";
+            $sql = "UPDATE funcionario SET nome='$nome',login='$login',acesso='$acesso',senha='$senha' WHERE id_funcionario = $id";
+            if(mysqli_query($conn, $sql))
+                echo "<p>Funcionário alterado com sucesso</p>";
             else
-                echo "<p>Erro ao cadastrar funcionário</p>";
+                echo "<p>Erro ao alterar funcionário</p>";
+            mysqli_close($conn);
+            echo '<a href="consultar_funcionarios.php"><div class="botao_acao">Realizar nova consulta</div></a>';
         }
-            echo '<a href="cadastrar_funcionario.php"><div class="botao_acao">Cadastrar novo funcionário</div></a>';
     }
     else
         echo "Você não tem permissão para realizar esta ação";
 ?>
     <a href="index.php"><div class="botao_acao">Voltar a tela inicial</div></a>
 </body>
-</html>

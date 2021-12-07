@@ -1,4 +1,10 @@
-<form method="POST" action="update_produto.php">
+<html>
+<head>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="formu">
+        <form method="POST" action="update_produto.php">
 <?php
     include("auth.php");
     if(check() != "Administrador")
@@ -13,21 +19,38 @@
         $produto = mysqli_fetch_array($produto);
         mysqli_close($conn);
 
-        echo '<label for="cod">Código de barras:</label>';
-        echo '<input type="text" name="cod" value="'.$produto['cod_barras'].'"><br>';
+        echo '<table>';
 
-        echo '<label for="nome">Nome:</label>';
-        echo '<input type="text" name="nome" value="'.$produto['nome'].'"><br>';
+        echo '<tr>';
+        echo '<td><label for="cod">Código de barras:</label></td>';
+        echo '<td><input type="text" name="cod" value="'.$produto['cod_barras'].'"></td>';
+        echo '</tr>';
 
-        echo '<label for="validade">Validade:</label>';
-        echo '<input type="date" name="validade" value="'.$produto['validade'].'"><br>';
+        echo '<tr>';
+        echo '<td><label for="nome">Nome:</label></td>';
+        echo '<td><input type="text" name="nome" value="'.$produto['nome'].'"></td>';
+        echo '</tr>';
 
-        echo '<label for="preco">Preço:</label>';
-        echo '<input type="text" name="preco" value="'.$produto['preco'].'"><br>';
+        echo '<tr>';
+        echo '<td><label for="validade">Validade:</label></td>';
+        echo '<td><input type="date" name="validade" value="'.$produto['validade'].'"></td>';
+        echo '</tr>';
 
-        echo '<label for="qtd">Quantidade:</label>';
-        echo '<input type="number" name="qtd" value="'.$produto['qtd'].'"><br>';
+        echo '<tr>';
+        echo '<td><label for="preco">Preço:</label></td>';
+        echo '<td><input type="text" name="preco" value="'.$produto['preco'].'"></td>';
+        echo '</tr>';
+
+        echo '<tr>';
+        echo '<td><label for="qtd">Quantidade:</label></td>';
+        echo '<td><input type="number" name="qtd" value="'.$produto['qtd'].'"></td>';
+        echo '</tr>';
+
+        echo '</table>';
     }
 ?>
-    <input type="submit" value="Submit">
-</form>
+            <input type="submit" value="Salvar">
+        </form>
+    </div>
+</body>
+</html>
