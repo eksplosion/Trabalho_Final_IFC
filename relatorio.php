@@ -45,9 +45,7 @@
             "AND produto.cod_barras = produtos_venda.cod_barras ".
             "WHERE data_venda BETWEEN '$data' AND '$limite' ".
             "GROUP BY produto.cod_barras";
-        echo $sql;
         $resultado = mysqli_query($conn, $sql);
-        echo mysqli_error($conn);
         $vendas = Array();
         while(($venda = mysqli_fetch_array($resultado)) != null)
         {
@@ -69,7 +67,7 @@
         echo '<a href="gerar_relatorio.php"><div class="botao_acao">Gerar novo relatório</div></a>';
     }
     else
-        echo "Você não tem permissão para realizar esta ação";
+        echo "<p>Você não tem permissão para realizar esta ação</p>";
 ?>
     <a href="index.php"><div class="botao_acao">Voltar a tela inicial</div></a>
 </body>

@@ -17,7 +17,7 @@
         $busca_acesso = $acesso != "";
         
         $sql = "SELECT * FROM funcionario".
-        ($busca_acesso ? " WHERE acesso = $acesso" : "").
+        ($busca_acesso == true ? " WHERE acesso = \"$acesso\"" : "").
         " ORDER BY nome";
         $resultado = mysqli_query($conn, $sql);
         $funcionarios = Array();
@@ -48,7 +48,7 @@
         echo '<a href="consultar_funcionarios.php"><div class="botao_acao">Realizar nova consulta</div></a>';
     }
     else
-        echo "Você não tem permissão para realizar esta ação";
+        echo "<p>Você não tem permissão para realizar esta ação</p>";
 ?>
     <a href="index.php"><div class="botao_acao">Voltar a tela inicial</div></a>
 </body>

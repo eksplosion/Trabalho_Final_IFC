@@ -9,7 +9,7 @@
     include("auth.php");
     if(check() != "Administrador")
     {
-        echo "Você não tem permissão para realizar esta ação";
+        echo "<p>Você não tem permissão para realizar esta ação</p>";
     }
     else
     {

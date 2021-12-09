@@ -27,7 +27,7 @@
             echo '<a href="cadastrar_funcionario.php"><div class="botao_acao">Cadastrar novo funcionário</div></a>';
     }
     else
-        echo "Você não tem permissão para realizar esta ação";
+        echo "<p>Você não tem permissão para realizar esta ação</p>";
 ?>
     <a href="index.php"><div class="botao_acao">Voltar a tela inicial</div></a>
 </body>
