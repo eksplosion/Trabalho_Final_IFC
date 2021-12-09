@@ -11,10 +11,10 @@
         include("conexao.php");
 
         $nome = $_POST['nome'];
-        $acesso = $_POST['acesso'];
-
         $busca_nome = $nome != "";
-        $busca_acesso = $acesso != "";
+
+        $busca_acesso = isset($_POST['acesso']);
+        $acesso = $busca_acesso == true ? $_POST['acesso'] : "";
         
         $sql = "SELECT * FROM funcionario".
         ($busca_acesso == true ? " WHERE acesso = \"$acesso\"" : "").
