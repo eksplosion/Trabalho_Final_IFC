@@ -33,5 +33,6 @@
 
             <input type="submit" class="botao_acao" value="Cadastrar">
         </form>
+        <a href="index.php"><div class="botao_acao">Voltar a tela inicial</div></a>
     </div>
 </body>

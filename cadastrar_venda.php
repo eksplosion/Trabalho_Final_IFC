@@ -21,6 +21,7 @@
             </table>
             <input type="submit" value="Cadastrar">
         </form>
+        <a href="index.php"><div class="botao_acao">Voltar a tela inicial</div></a>
     </div>
 </body>
 </html>

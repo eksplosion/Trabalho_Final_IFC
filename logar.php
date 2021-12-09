@@ -4,6 +4,7 @@
 </head>
 <body>
     <div class="formu">
+        <h3>Efetuar Login</h3>
 <?php
     if(isset($_GET['erro']))
         if($_GET['erro'])

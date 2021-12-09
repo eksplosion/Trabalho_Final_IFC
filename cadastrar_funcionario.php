@@ -4,6 +4,7 @@
 </head>
 <body>
     <div class="formu">
+    <h3>Cadastro de Funcionário</h3>
     <form method="POST" action="cadastro_funcionario.php">
         <table>
             <tr>

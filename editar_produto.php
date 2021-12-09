@@ -4,6 +4,7 @@
 </head>
 <body>
     <div class="formu">
+        <h3>Editar Produto</h3>
         <form method="POST" action="update_produto.php">
 <?php
     include("auth.php");
@@ -51,6 +52,7 @@
 ?>
             <input type="submit" value="Salvar">
         </form>
+        <a href="index.php"><div class="botao_acao">Voltar a tela inicial</div></a>
     </div>
 </body>
 </html>
